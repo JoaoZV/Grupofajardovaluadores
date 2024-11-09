@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grupo Fajardo Valuadores</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            height: 100%;
+            background-color: #f5f5f5;
+        }
+
+        /* Estilos generales */
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('1.PNG'); /* Imagen de fondo */
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+        }
+
+        .content {
+            background-color: rgba(255, 255, 255, 0.8); /* Fondo con transparencia */
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 0.5em;
+        }
+
+        p {
+            font-size: 1.2em;
+            margin-bottom: 1em;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .buttons a {
+            text-decoration: none;
+            background-color: #f5a623;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1.2em;
+        }
+
+        .buttons a:hover {
+            background-color: #f59300;
+        }
+
+        /* Estilo para que cada sección ocupe la pantalla completa */
+        .section {
+            height: 100vh; /* Ocupa el 100% de la pantalla */
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            padding: 20px;
+        }
+
+        /* Estilos para la sección de servicios (Beige) */
+        #servicios {
+            background-color: #f5f5dc; /* Beige */
+        }
+
+        .services {
+            width: 50%;
+            text-align: center;
+        }
+
+        .services h2 {
+            font-size: 2.5em;
+            margin-bottom: 1em;
+        }
+
+        .services a {
+            display: block;
+            font-size: 1.5em;
+            color: black;
+            text-decoration: none;
+            margin-bottom: 1em;
+        }
+
+        .services a:hover {
+            text-decoration: underline;
+        }
+
+        /* Botón de regreso alineado a la parte inferior izquierda */
+        .image-container {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+        }
+
+        .image-container a img {
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+
+        /* Estilos para la sección "Quiénes somos" (Gris) */
+        #quienes-somos {
+            background-color: #d3d3d3; /* Gris */
+        }
+
+        .about-container {
+            width: 80%;
+            text-align: center;
+        }
+
+        .about-container h2 {
+            font-size: 2.5em;
+            margin-bottom: 1em;
+        }
+
+        .about-container p {
+            font-size: 1.2em;
+            margin-bottom: 1.5em;
+            text-align: justify;
+        }
+
+        .mis-valores {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .mis-valores div {
+            width: 30%;
+            text-align: center;
+        }
+
+        .mis-valores img {
+            width: 100px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .mis-valores h3 {
+            font-size: 1.4em;
+            margin-bottom: 10px;
+        }
+
+        .mis-valores p {
+            font-size: 1em;
+        }
+
+        /* Estilos para la sección de contacto (Crema) */
+        #contacto {
+            background-color: #fffdd0; /* Crema */
+        }
+
+        #contacto h2 {
+            font-size: 2.5em;
+            margin-bottom: 1em;
+        }
+
+        #contacto p {
+            font-size: 1.2em;
+            margin-bottom: 1em;
+        }
+
+        #contacto a {
+            color: #f5a623;
+            text-decoration: none;
+        }
+
+        #contacto a:hover {
+            text-decoration: underline;
+        }
+
+     /* Estilos para la sección de redes sociales */
+#redes-sociales {
+    background-image: url('7.png'); /* Fondo de la imagen 7.PNG */
+    background-size: cover; /* Asegura que la imagen cubra toda la sección */
+    background-position: center; /* Centra la imagen */
+    color: white;
+    text-align: center;
+}
+
+
+        #redes-sociales h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        #redes-sociales .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        #redes-sociales a {
+            color: #f5a623;
+            font-size: 1.5em;
+            text-decoration: none;
+        }
+
+        #redes-sociales a:hover {
+            text-decoration: underline;
+        }
+
+        /* Scroll suave */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .mis-valores {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .mis-valores div {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+
+            #redes-sociales .social-links {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sección de bienvenida -->
+    <div class="container" id="inicio">
+        <div class="content">
+            <h1>GRUPO FAJARDO VALUADORES</h1>
+            <p>Expertos en valor, comprometidos con tu patrimonio</p>
+            <div class="buttons">
+                <a href="#servicios">Servicios</a>
+                <a href="#quienes-somos">Quiénes somos</a>
+                <a href="#contacto">Contáctanos</a>
+            </div>
+        </div>
+    </div>
+
+   <!-- Sección de servicios (Beige) -->
+<div id="servicios" class="section">
+    <div class="services">
+        <h2>SERVICIOS</h2>
+        <a href="#contacto">AVALÚOS</a>
+        <a href="#contacto">OPINIONES DE VALOR</a>
+        <a href="#contacto">PLANOS ARQUITECTÓNICOS</a>
+        
+        <!-- Imagen añadida aquí -->
+        <img src="12.jpg" alt="Servicios" style="max-width: 100%; height: auto; margin-top: 20px;">
+    </div>
+
+    <div class="image-container">
+        <a href="#inicio">
+            <img src="6.jpg" alt="Botón de regreso al inicio">
+        </a>
+    </div>
+</div>
+
+
+        <div class="image-container">
+            <a href="#inicio">
+                <img src="6.jpg" alt="Botón de regreso al inicio">
+            </a>
+        </div>
+    </div>
+
+    <!-- Sección de Quiénes somos (Gris) -->
+    <div id="quienes-somos" class="section">
+        <div class="about-container">
+            <h2>¿Quiénes somos?</h2>
+            <p>Grupo Fajardo Valuadores inició hace 15 años bajo el liderazgo del maestro e ingeniero civil Miguel Ángel Fajardo Castillejo y la arquitecta Bertha Verónica Quintero Martínez. Con visión y dedicación, comenzaron con una sola unidad de valuación, enfrentando los retos del mercado inmobiliario con un enfoque en la precisión y la ética profesional.</p>
+            <p>Gracias a su esfuerzo constante y compromiso con la excelencia, el grupo ha crecido, sumando más unidades de valuación y expandiendo su equipo. Hoy, Grupo Fajardo Valuadores es reconocido por su rapidez y eficiencia, posicionándose como el favorito de bancos y constructoras en la región, ofreciendo servicios de alta calidad que aseguran la confianza de sus clientes.</p>
+        </div>
+
+        <div class="mis-valores">
+            <div>
+                <img src="3.jpg" alt="Misión">
+                <h3>MISIÓN</h3>
+                <p>Proveer servicios de valuación inmobiliaria con los más altos estándares de calidad, rapidez y precisión, garantizando que nuestros clientes reciban evaluaciones profesionales que respalden sus decisiones patrimoniales.</p>
+            </div>
+            <div>
+                <img src="4.jpg" alt="Visión">
+                <h3>VISIÓN</h3>
+                <p>Ser el grupo líder en valuación de bienes inmuebles en México, expandiendo nuestras capacidades y consolidando nuestra reputación como el aliado estratégico de bancos y constructoras a nivel nacional.</p>
+            </div>
+            <div>
+                <img src="5.jpg" alt="Valores">
+                <h3>VALORES</h3>
+                <p>Compromiso, ética, precisión, responsabilidad e innovación.</p>
+            </div>
+        </div>
+
+        <div class="image-container">
+            <a href="#inicio">
+                <img src="6.jpg" alt="Botón de regreso al inicio">
+            </a>
+        </div>
+    </div>
+
+    <!-- Sección de Contacto (Crema) -->
+    <div id="contacto" class="section">
+        <h2>Contáctanos</h2>
+        <div style="display: flex; justify-content: space-between; width: 80%; margin: 0 auto;">
+            <div style="text-align: left;">
+                <h3>Verónica Fajardo</h3>
+                <p>Correo: <a href="mailto:Vemiqui1@hotmail.com">Vemiqui1@hotmail.com</a></p>
+                <p>Teléfono: <a href="tel:+524492209473">(449)-220-94-73</a></p>
+                <p>Arq. Bertha Verónica Quintero Martínez</p>
+            </div>
+            <div style="text-align: left;">
+                <h3>Miguel Ángel</h3>
+                <p>Correo: <a href="mailto:Mafc05@hotmail.com">Mafc05@hotmail.com</a></p>
+                <p>Teléfonos: <a href="tel:+524493577235">(449)-357-72-35</a> / <a href="tel:+523312122683">(33)-1212-26-83</a></p>
+                <p>Ma. Ing. Miguel Ángel Fajardo Castillejo</p>
+            </div>
+        </div>
+
+        <div class="image-container">
+            <a href="#inicio">
+                <img src="6.jpg" alt="Botón de regreso al inicio">
+            </a>
+        </div>
+    </div>
+
+    <!-- Sección de Redes Sociales -->
+    <div id="redes-sociales" class="section">
+        <h2>Síguenos en nuestras redes sociales</h2>
+        <div class="social-links">
+            <a href="https://www.facebook.com/grupofajardovaluadores/" target="_blank">
+                <img src="11.png" alt="Facebook" style="width: 100px; height: 100px;">
+            </a>
+            <a href="https://mail.google.com/mail/u/0/?hl=es&tf=cm&fs=1&to=mafc05@hotmail.com" target="_blank">
+                <img src="9.png" alt="Instagram" style="width: 100px; height: 100px;">
+            </a>
+            <a href="https://www.facebook.com/grupofajardovaluadores/" target="_blank">
+                <img src="10.png" alt="Twitter" style="width: 100px; height: 100px;">
+            </a>
+        </div>
+
+        <div class="image-container">
+            <a href="#inicio">
+                <img src="6.jpg" alt="Botón de regreso al inicio">
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>
